@@ -74,13 +74,7 @@ public class NetWork {
 	        return null;
 	    }
 	   
-	   //测试新增素材
-	   @Test
-	   public void addSucai()
-	   {
-		   
-		   
-	   }
+
 	   
   
     public static void main(String[] args) {    	
