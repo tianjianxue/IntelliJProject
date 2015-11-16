@@ -17,15 +17,16 @@
 <body>
 <%
   String code=request.getParameter("code");
-  out.print(code);
   NetWork work=new NetWork();
   String json=work.getOath2(code);
   System.out.print(json);
   JSONObject obj=JSONObject.fromObject(json);
-  String access_token= obj.get("access_token");
-  String openid= obj.get("openid");
-  out.print("您"+openid);
-
+  String access_token= obj.getString("access_token");
+  String openid= obj.getString("openid");
+  out.print("您的OPENID:"+openid+"<hr/>");
+  String url="https://api.weixin.qq.com/sns/userinfo?access_token="+access_token+"&openid="+openid+"&lang=zh_CN";
+  String userinfo=work.sendByGet(url);
+  out.print(userinfo);
 
 %>
 </body>
