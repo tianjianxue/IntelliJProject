@@ -20,7 +20,7 @@ import util.WeChartConvert;
 import web.WeiXin;
 
 public class Test1 {
-	final String ACCESS_TOKEN="trG87Ygzh2f1lkRW5ye2YmZ9qiRmtK5NwQG1FoYEGt07Wo1_3qmd6RK8mIyVVJKX1dtEh9ZH3moGjztO33N8CABwfaWwhpO9aLW6a2XxGxcGRReAEAYJJ";
+	final String ACCESS_TOKEN="vTy_QCm-8OO36PCZFud1eaDzAAXiSUzblDQmy_0bF-mQ9knC8lowPJFSF61vS1B7LU_CrimoRgA-vTJM1jZEn8uhr3zqMTwO_VBfiCB2kF0PFIiAIAUKN";
 
 	@Test
 	public void testAddSuCai() {
@@ -45,8 +45,8 @@ public class Test1 {
 		NetWorkFile f;
 		try {
 			f = new NetWorkFile(sucai);
-			long size=f.downLoad("E:/myFile");
-			System.out.println(size);	
+			long size=f.downLoad("D:/myFile");
+			System.out.println(size);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
