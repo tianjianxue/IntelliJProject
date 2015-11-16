@@ -14,7 +14,9 @@ import org.junit.Test;
 
 import net.sf.json.JSONObject;
 
-public class NetWork {  
+public class NetWork {
+
+
        
 	   public  String sendByPost(String urlString,JSONObject json) {
 		   return sendHttp(urlString, "POST",json); 
@@ -89,10 +91,13 @@ public class NetWork {
     	NetWork work=new NetWork();
     	String responseText=work.sendByPost(sucai);
     	System.out.println(responseText);
-    	
-    	
-    	
-        
-    }  
+    }
+
+	public String getOath2(String code)
+	{
+		String url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wxbc0d6ff65d0f13b3&secret=c3f3cc1e2f76715bd9a7f0b27f0791d2&code="+code+"&grant_type=authorization_code";
+		return sendByPost(url);
+
+	}
   
 } 
